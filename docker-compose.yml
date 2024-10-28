@@ -1,7 +1,8 @@
 services:
   supsvc:
-    build:
-      context: .
+    # build:
+    #   context: .
+    image: ghcr.io/tofoli/supervise:main
     container_name: supervise
     restart: unless-stopped
     privileged: true
