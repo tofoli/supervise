@@ -1,0 +1,11 @@
+services:
+  supsvc:
+    build:
+      context: .
+    container_name: supervise
+    restart: unless-stopped
+    privileged: true
+    ports:
+      - 4470:4470
+    devices:
+      - /dev/bus/usb:/dev/bus/usb

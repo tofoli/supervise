@@ -1,0 +1,496 @@
+{
+    "annotations": {
+        "list": [
+            {
+                "builtIn": 1,
+                "datasource": {
+                    "type": "grafana",
+                    "uid": "-- Grafana --"
+                },
+                "enable": true,
+                "hide": true,
+                "iconColor": "rgba(0, 211, 255, 1)",
+                "name": "Annotations & Alerts",
+                "type": "dashboard"
+            }
+        ]
+    },
+    "editable": true,
+    "fiscalYearStartMonth": 0,
+    "graphTooltip": 0,
+    "id": 15,
+    "links": [],
+    "liveNow": false,
+    "panels": [
+        {
+            "datasource": {
+                "type": "marcusolsson-json-datasource",
+                "uid": "cc53796f-b6d3-42ca-a227-acba1b05d70e"
+            },
+            "fieldConfig": {
+                "defaults": {
+                    "color": {
+                        "mode": "continuous-RdYlGr"
+                    },
+                    "mappings": [],
+                    "max": 100,
+                    "min": 0,
+                    "thresholds": {
+                        "mode": "percentage",
+                        "steps": [
+                            {
+                                "color": "green",
+                                "value": null
+                            },
+                            {
+                                "color": "red",
+                                "value": 80
+                            }
+                        ]
+                    },
+                    "unit": "percent"
+                },
+                "overrides": []
+            },
+            "gridPos": {
+                "h": 8,
+                "w": 12,
+                "x": 0,
+                "y": 0
+            },
+            "id": 1,
+            "options": {
+                "displayMode": "lcd",
+                "minVizHeight": 10,
+                "minVizWidth": 0,
+                "orientation": "horizontal",
+                "reduceOptions": {
+                    "calcs": [
+                        "lastNotNull"
+                    ],
+                    "fields": "",
+                    "values": false
+                },
+                "showUnfilled": true,
+                "valueMode": "color"
+            },
+            "pluginVersion": "10.0.1",
+            "targets": [
+                {
+                    "cacheDurationSeconds": 5,
+                    "datasource": {
+                        "type": "marcusolsson-json-datasource",
+                        "uid": "cc53796f-b6d3-42ca-a227-acba1b05d70e"
+                    },
+                    "fields": [
+                        {
+                            "jsonPath": "$.logs[*].vars.cBattery",
+                            "language": "jsonpath",
+                            "name": "Bateria",
+                            "type": "number"
+                        }
+                    ],
+                    "hide": false,
+                    "method": "GET",
+                    "queryParams": "",
+                    "refId": "A",
+                    "urlPath": ""
+                }
+            ],
+            "title": "Bateria",
+            "type": "bargauge"
+        },
+        {
+            "datasource": {
+                "type": "marcusolsson-json-datasource",
+                "uid": "cc53796f-b6d3-42ca-a227-acba1b05d70e"
+            },
+            "fieldConfig": {
+                "defaults": {
+                    "color": {
+                        "mode": "continuous-BlPu"
+                    },
+                    "mappings": [],
+                    "max": 230,
+                    "min": 190,
+                    "thresholds": {
+                        "mode": "absolute",
+                        "steps": [
+                            {
+                                "color": "green",
+                                "value": null
+                            },
+                            {
+                                "color": "#EAB839",
+                                "value": 24
+                            },
+                            {
+                                "color": "#6ED0E0",
+                                "value": 27
+                            }
+                        ]
+                    }
+                },
+                "overrides": []
+            },
+            "gridPos": {
+                "h": 8,
+                "w": 12,
+                "x": 12,
+                "y": 0
+            },
+            "id": 3,
+            "options": {
+                "displayMode": "lcd",
+                "minVizHeight": 10,
+                "minVizWidth": 0,
+                "orientation": "horizontal",
+                "reduceOptions": {
+                    "calcs": [
+                        "lastNotNull"
+                    ],
+                    "fields": "",
+                    "values": false
+                },
+                "showUnfilled": true,
+                "valueMode": "color"
+            },
+            "pluginVersion": "10.0.1",
+            "targets": [
+                {
+                    "cacheDurationSeconds": 300,
+                    "datasource": {
+                        "type": "marcusolsson-json-datasource",
+                        "uid": "cc53796f-b6d3-42ca-a227-acba1b05d70e"
+                    },
+                    "fields": [
+                        {
+                            "jsonPath": "$.logs[*].vars.vInput",
+                            "type": "number"
+                        }
+                    ],
+                    "method": "GET",
+                    "queryParams": "",
+                    "refId": "A",
+                    "urlPath": ""
+                }
+            ],
+            "title": "Tensão Entrada",
+            "type": "bargauge"
+        },
+        {
+            "datasource": {
+                "type": "marcusolsson-json-datasource",
+                "uid": "cc53796f-b6d3-42ca-a227-acba1b05d70e"
+            },
+            "fieldConfig": {
+                "defaults": {
+                    "color": {
+                        "mode": "continuous-purples"
+                    },
+                    "mappings": [],
+                    "max": 28,
+                    "min": 18,
+                    "thresholds": {
+                        "mode": "absolute",
+                        "steps": [
+                            {
+                                "color": "green",
+                                "value": null
+                            },
+                            {
+                                "color": "#EAB839",
+                                "value": 24
+                            },
+                            {
+                                "color": "#6ED0E0",
+                                "value": 27
+                            }
+                        ]
+                    },
+                    "unit": "none"
+                },
+                "overrides": []
+            },
+            "gridPos": {
+                "h": 8,
+                "w": 12,
+                "x": 0,
+                "y": 8
+            },
+            "id": 2,
+            "options": {
+                "displayMode": "lcd",
+                "minVizHeight": 10,
+                "minVizWidth": 0,
+                "orientation": "horizontal",
+                "reduceOptions": {
+                    "calcs": [
+                        "lastNotNull"
+                    ],
+                    "fields": "",
+                    "values": false
+                },
+                "showUnfilled": true,
+                "valueMode": "color"
+            },
+            "pluginVersion": "10.0.1",
+            "targets": [
+                {
+                    "cacheDurationSeconds": 300,
+                    "datasource": {
+                        "type": "marcusolsson-json-datasource",
+                        "uid": "cc53796f-b6d3-42ca-a227-acba1b05d70e"
+                    },
+                    "fields": [
+                        {
+                            "jsonPath": "$.logs[*].vars.vBattery",
+                            "type": "number"
+                        }
+                    ],
+                    "method": "GET",
+                    "queryParams": "",
+                    "refId": "A",
+                    "urlPath": ""
+                }
+            ],
+            "title": "Tensão Bateria",
+            "type": "bargauge"
+        },
+        {
+            "datasource": {
+                "type": "marcusolsson-json-datasource",
+                "uid": "cc53796f-b6d3-42ca-a227-acba1b05d70e"
+            },
+            "fieldConfig": {
+                "defaults": {
+                    "color": {
+                        "mode": "continuous-YlBl"
+                    },
+                    "mappings": [],
+                    "max": 130,
+                    "min": 105,
+                    "thresholds": {
+                        "mode": "absolute",
+                        "steps": [
+                            {
+                                "color": "green",
+                                "value": null
+                            },
+                            {
+                                "color": "#EAB839",
+                                "value": 24
+                            },
+                            {
+                                "color": "#6ED0E0",
+                                "value": 27
+                            }
+                        ]
+                    }
+                },
+                "overrides": []
+            },
+            "gridPos": {
+                "h": 8,
+                "w": 12,
+                "x": 12,
+                "y": 8
+            },
+            "id": 4,
+            "options": {
+                "displayMode": "lcd",
+                "minVizHeight": 10,
+                "minVizWidth": 0,
+                "orientation": "horizontal",
+                "reduceOptions": {
+                    "calcs": [
+                        "lastNotNull"
+                    ],
+                    "fields": "",
+                    "values": false
+                },
+                "showUnfilled": true,
+                "valueMode": "color"
+            },
+            "pluginVersion": "10.0.1",
+            "targets": [
+                {
+                    "cacheDurationSeconds": 300,
+                    "datasource": {
+                        "type": "marcusolsson-json-datasource",
+                        "uid": "cc53796f-b6d3-42ca-a227-acba1b05d70e"
+                    },
+                    "fields": [
+                        {
+                            "jsonPath": "$.logs[*].vars.vOutput",
+                            "type": "number"
+                        }
+                    ],
+                    "method": "GET",
+                    "queryParams": "",
+                    "refId": "A",
+                    "urlPath": ""
+                }
+            ],
+            "title": "Tensão Saida",
+            "type": "bargauge"
+        },
+        {
+            "datasource": {
+                "type": "marcusolsson-json-datasource",
+                "uid": "cc53796f-b6d3-42ca-a227-acba1b05d70e"
+            },
+            "fieldConfig": {
+                "defaults": {
+                    "color": {
+                        "mode": "palette-classic"
+                    },
+                    "custom": {
+                        "axisCenteredZero": false,
+                        "axisColorMode": "text",
+                        "axisLabel": "",
+                        "axisPlacement": "auto",
+                        "barAlignment": 0,
+                        "drawStyle": "line",
+                        "fillOpacity": 0,
+                        "gradientMode": "none",
+                        "hideFrom": {
+                            "legend": false,
+                            "tooltip": false,
+                            "viz": false
+                        },
+                        "lineInterpolation": "linear",
+                        "lineWidth": 1,
+                        "pointSize": 5,
+                        "scaleDistribution": {
+                            "type": "linear"
+                        },
+                        "showPoints": "auto",
+                        "spanNulls": false,
+                        "stacking": {
+                            "group": "A",
+                            "mode": "none"
+                        },
+                        "thresholdsStyle": {
+                            "mode": "off"
+                        }
+                    },
+                    "mappings": [],
+                    "thresholds": {
+                        "mode": "absolute",
+                        "steps": [
+                            {
+                                "color": "green",
+                                "value": null
+                            },
+                            {
+                                "color": "red",
+                                "value": 80
+                            }
+                        ]
+                    }
+                },
+                "overrides": []
+            },
+            "gridPos": {
+                "h": 15,
+                "w": 24,
+                "x": 0,
+                "y": 16
+            },
+            "id": 5,
+            "options": {
+                "legend": {
+                    "calcs": [],
+                    "displayMode": "list",
+                    "placement": "bottom",
+                    "showLegend": true
+                },
+                "tooltip": {
+                    "mode": "single",
+                    "sort": "none"
+                }
+            },
+            "targets": [
+                {
+                    "cacheDurationSeconds": 300,
+                    "datasource": {
+                        "type": "marcusolsson-json-datasource",
+                        "uid": "cc53796f-b6d3-42ca-a227-acba1b05d70e"
+                    },
+                    "fields": [
+                        {
+                            "jsonPath": "$.logs[*].dateTime",
+                            "type": "time"
+                        },
+                        {
+                            "jsonPath": "$.logs[*].vars.vBattery",
+                            "language": "jsonpath",
+                            "name": "Tensão Bateria",
+                            "type": "number"
+                        },
+                        {
+                            "jsonPath": "$.logs[*].vars.temperature",
+                            "language": "jsonpath",
+                            "name": "Temperatura",
+                            "type": "number"
+                        },
+                        {
+                            "jsonPath": "$.logs[*].vars.cBattery",
+                            "language": "jsonpath",
+                            "name": "% Bateria"
+                        },
+                        {
+                            "jsonPath": "$.logs[*].vars.fOutput",
+                            "language": "jsonpath",
+                            "name": "Hz Saída"
+                        },
+                        {
+                            "jsonPath": "$.logs[*].vars.iOutput",
+                            "language": "jsonpath",
+                            "name": "A Saída"
+                        },
+                        {
+                            "jsonPath": "$.logs[*].vars.pOutput",
+                            "language": "jsonpath",
+                            "name": "% Potência"
+                        },
+                        {
+                            "jsonPath": "$.logs[*].vars.vInput",
+                            "language": "jsonpath",
+                            "name": "Tensão Entrada"
+                        },
+                        {
+                            "jsonPath": "$.logs[*].vars.vOutput",
+                            "language": "jsonpath",
+                            "name": "Tensão Saída"
+                        }
+                    ],
+                    "method": "GET",
+                    "queryParams": "",
+                    "refId": "A",
+                    "urlPath": ""
+                }
+            ],
+            "title": "Panel Title",
+            "type": "timeseries"
+        }
+    ],
+    "refresh": false,
+    "schemaVersion": 38,
+    "style": "dark",
+    "tags": [],
+    "templating": {
+        "list": []
+    },
+    "time": {
+        "from": "now-30m",
+        "to": "now"
+    },
+    "timepicker": {},
+    "timezone": "",
+    "title": "Nobreak Supervise",
+    "uid": "bed55be9-5960-43b8-9510-08cdb16f709d",
+    "version": 4,
+    "weekStart": ""
+}

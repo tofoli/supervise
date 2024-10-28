@@ -1,0 +1,15 @@
+#!/usr/bin/expect
+
+set timeout 600
+
+spawn ./supervise.sh
+
+expect "scolha uma das opções disponíveis" 
+send -- "1\r"
+expect "perte ENTER para iniciar a correção"
+send -- "\n"
+expect "nstalar pacotes ausentes"
+send -- "S\r"
+expect "perte ENTER para concluir ou informe o número dos serviços"
+send -- "\n"
+expect eof
